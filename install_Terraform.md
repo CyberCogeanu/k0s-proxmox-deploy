@@ -1,13 +1,16 @@
 **1. Download the Terraform Binary:**
 
-  * Visit the official Terraform downloads page: [https://www.terraform.io/downloads](https://www.google.com/url?sa=E&source=gmail&q=https://www.terraform.io/downloads)
-  * Find the Linux section and locate the correct version for your system (likely 64-bit).  The filename will look something like `terraform_1.x.x_linux_amd64.zip` (replace `1.x.x` with the actual version number).
+  * Visit the official Terraform downloads page: https://developer.hashicorp.com/terraform/install
+  * Find the Linux section and locate the correct version for your system (likely 64-bit).  
+  * The filename will look something like `terraform_1.x.x_linux_amd64.zip` (replace `1.x.x` with the actual version number).
   * Download the zip file. You can do this through your browser or using the command line with `wget`:
 
 <!-- end list -->
 
 ```bash
-wget https://releases.hashicorp.com/terraform/1.x.x/terraform_1.x.x_linux_amd64.zip  # Replace with the actual URL
+wget -O - https://apt.releases.hashicorp.com/gpg | sudo gpg --dearmor -o /usr/share/keyrings/hashicorp-archive-keyring.gpg
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/hashicorp-archive-keyring.gpg] https://apt.releases.hashicorp.com $(lsb_release -cs) main" | sudo tee /etc/apt/sources.list.d/hashicorp.list
+sudo apt update && sudo apt install terraform
 ```
 
 **2. Extract the Binary:**

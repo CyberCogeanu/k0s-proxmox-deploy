@@ -27,7 +27,9 @@ The project utilizes Terraform to provision VMs on Proxmox and Ansible to instal
 ### Setup and Run Instructions
 
 1. **Prerequisites:**
-    * Install Terraform, Ansible, and k0sctl.
+    * Install Terraform - https://github.com/CyberCogeanu/k0s-proxmox-deploy/blob/main/install_Terraform.md
+    * Install Ansible
+    * Install k0sctl
     * Ensure your Proxmox environment is accessible via SSH.
     * Configure SSH keys for authentication.
 2. **Clone the repository:**
