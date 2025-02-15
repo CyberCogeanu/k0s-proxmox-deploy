@@ -1,4 +1,9 @@
 # cloud config
+# File: cloud-config.yaml
+# Description: Cloud-init configuration for Proxmox VMs.
+# Last Updated: February 15, 2025 20:30 CET
+# Created by: https://github.com/CyberCogeanu
+
 users:
 - default
 - name: ubuntu
